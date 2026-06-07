@@ -6,7 +6,6 @@ target/
 .env
 .env.*
 efs-data/
-Wallet_DUOCUC/
 postman/
 *.pdf
 *.docx

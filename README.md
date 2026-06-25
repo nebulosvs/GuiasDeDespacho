@@ -52,7 +52,6 @@ Desarrollar una plataforma centralizada para la administración de guías de des
 - Azure Active Directory
 
 ## Arquitectura
-
 ```text
                     ┌─────────────────┐
                     │     Cliente     │
@@ -68,10 +67,16 @@ Desarrollar una plataforma centralizada para la administración de guías de des
         │ Spring Boot API (Docker en EC2)     │
         └───────┬──────────────┬──────────────┘
                 │              │
-                ▼              ▼
-      ┌────────────────┐ ┌──────────────┐
-      │ Oracle Database (externa a EC2) │ │  Amazon S3   │
-      └────────────────┘ └──────────────┘
+                │              ▼
+                │      ┌──────────────┐
+                │      │  Amazon S3   │
+                │      └──────────────┘
+                │
+                ▼
+      ┌─────────────────────┐
+      │ Oracle Database     │
+      │ (externa a EC2)     │
+      └─────────────────────┘
                 │
                 ▼
          ┌──────────────┐
@@ -81,10 +86,10 @@ Desarrollar una plataforma centralizada para la administración de guías de des
                 ▲
                 │
       ┌─────────────────────┐
-      │ Azure Active Directory │
+      │ Azure Active        │
+      │ Directory           │
       └─────────────────────┘
 ```
-
 ## Funcionalidades
 
 ### Guías de Despacho

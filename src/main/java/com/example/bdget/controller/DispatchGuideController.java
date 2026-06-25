@@ -54,9 +54,8 @@ public class DispatchGuideController {
 
     @GetMapping("/{id}/download")
     public ResponseEntity<byte[]> downloadGuide(
-            @PathVariable Long id,
-            @RequestParam String transportista) {
-        byte[] content = dispatchGuideService.downloadGuide(id, transportista);
+            @PathVariable Long id) {
+        byte[] content = dispatchGuideService.downloadGuide(id);
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_PDF)
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"guia" + id + ".pdf\"")
@@ -66,16 +65,14 @@ public class DispatchGuideController {
     @PutMapping("/{id}")
     public ResponseEntity<DispatchGuideResponseDto> updateGuide(
             @PathVariable Long id,
-            @RequestParam String transportista,
             @RequestBody DispatchGuideUpdateDto request) {
-        return ResponseEntity.ok(dispatchGuideService.updateGuide(id, request, transportista));
+        return ResponseEntity.ok(dispatchGuideService.updateGuide(id, request));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Map<String, String>> deleteGuide(
-            @PathVariable Long id,
-            @RequestParam String transportista) {
-        dispatchGuideService.deleteGuide(id, transportista);
+            @PathVariable Long id) {
+        dispatchGuideService.deleteGuide(id);
         Map<String, String> response = new HashMap<>();
         response.put("message", "Guia eliminada correctamente");
         return ResponseEntity.ok(response);

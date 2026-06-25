@@ -13,11 +13,11 @@ public interface DispatchGuideService {
 
     DispatchGuideResponseDto uploadGuideToS3(Long id);
 
-    byte[] downloadGuide(Long id, String transportista);
+    byte[] downloadGuide(Long id);
 
-    DispatchGuideResponseDto updateGuide(Long id, DispatchGuideUpdateDto request, String transportista);
+    DispatchGuideResponseDto updateGuide(Long id, DispatchGuideUpdateDto request);
 
-    void deleteGuide(Long id, String transportista);
+    void deleteGuide(Long id);
 
     List<DispatchGuideResponseDto> getGuideHistory(String transportista, LocalDate fecha);
 }

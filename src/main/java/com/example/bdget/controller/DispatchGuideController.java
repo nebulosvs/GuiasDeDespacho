@@ -58,7 +58,7 @@ public class DispatchGuideController {
         byte[] content = dispatchGuideService.downloadGuide(id);
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_PDF)
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"guia" + id + ".pdf\"")
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"guia" + id + ".txt\"")
                 .body(content);
     }
 

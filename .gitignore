@@ -48,5 +48,5 @@ efs-data/*
 !efs-data/.gitkeep
 
 ### Documentacion del curso (no incluir en repo) ###
-*.pdf
+*.txt
 *.docx

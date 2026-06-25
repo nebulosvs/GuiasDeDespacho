@@ -17,7 +17,7 @@ public class DispatchGuideFileService {
     }
 
     public String buildFileName(Long guideId) {
-        return "guia" + guideId + ".pdf";
+        return "guia" + guideId + ".txt";
     }
 
     public String buildEfsRelativePath(DispatchGuide guide) {

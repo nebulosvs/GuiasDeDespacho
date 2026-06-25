@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "bdget-semana3-collection",
 		"name": "BDGET - Semana 3 (CDY2204)",
-		"description": "Colección para demostrar el Sistema de Guías de Despacho: almacenamiento temporal en EFS, gestión en AWS S3 y endpoints REST.\n\n**Orden sugerido para el video:**\n1. Crear guía de despacho (guarda en EFS)\n2. Consultar historial por transportista y fecha\n3. Descargar guía (validación de permisos)\n4. Subir guía a S3\n5. Descargar guía desde S3\n6. Modificar / actualizar guía\n7. Consultar historial nuevamente\n8. Eliminar guía específica\n\n**Variables de colección:**\n- `baseUrl`: URL del microservicio\n- `transportista`: nombre del transportista\n- `guiaId`: se actualiza al crear una guía\n- `s3Key`: clave S3 generada (yyyyMM/transportista/guia{id}.pdf)",
+		"description": "Colección para demostrar el Sistema de Guías de Despacho: almacenamiento temporal en EFS, gestión en AWS S3 y endpoints REST.\n\n**Orden sugerido para el video:**\n1. Crear guía de despacho (guarda en EFS)\n2. Consultar historial por transportista y fecha\n3. Descargar guía (validación de permisos)\n4. Subir guía a S3\n5. Descargar guía desde S3\n6. Modificar / actualizar guía\n7. Consultar historial nuevamente\n8. Eliminar guía específica\n\n**Variables de colección:**\n- `baseUrl`: URL del microservicio\n- `transportista`: nombre del transportista\n- `guiaId`: se actualiza al crear una guía\n- `s3Key`: clave S3 generada (yyyyMM/transportista/guia{id}.txt)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"variable": [
@@ -165,7 +165,7 @@
 							"host": ["{{baseUrl}}"],
 							"path": ["api", "guias", "{{guiaId}}", "s3"]
 						},
-						"description": "Sube la guía desde EFS a S3 en la ruta yyyyMM/transportista/guia{id}.pdf"
+						"description": "Sube la guía desde EFS a S3 en la ruta yyyyMM/transportista/guia{id}.txt"
 					},
 					"response": []
 				},

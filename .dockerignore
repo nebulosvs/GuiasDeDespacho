@@ -7,6 +7,6 @@ target/
 .env.*
 efs-data/
 postman/
-*.pdf
+*.txt
 *.docx
 run-local.ps1

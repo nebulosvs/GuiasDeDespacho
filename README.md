@@ -121,6 +121,17 @@ El proyecto utiliza GitHub Actions para:
 - Construir imágenes Docker.
 - Desplegar la aplicación en AWS EC2.
 
+## Aspectos Técnicos Destacados
+
+- Arquitectura basada en servicios REST.
+- Autenticación mediante JWT validado contra Azure Active Directory.
+- Gestión de archivos utilizando Amazon S3 y Amazon EFS.
+- Contenerización de la aplicación mediante Docker.
+- Exposición segura de endpoints a través de AWS API Gateway.
+- Integración continua y despliegue continuo (CI/CD) mediante GitHub Actions.
+- Persistencia de datos utilizando Oracle Database y Spring Data JPA.
+- Implementación de validaciones utilizando Jakarta Validation.
+
 ## Posibles Mejoras Futuras
 
 - Implementación de auditoría de cambios.

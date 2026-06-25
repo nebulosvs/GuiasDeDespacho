@@ -31,7 +31,9 @@ Desarrollar una plataforma centralizada para la administración de guías de des
 
 ### Base de Datos
 
-- Oracle Database
+- Oracle Database (servicio administrado externo a la infraestructura EC2)
+- Spring Data JPA
+- Hibernate
 
 ### Cloud
 
@@ -68,7 +70,8 @@ Desarrollar una plataforma centralizada para la administración de guías de des
                 │              │
                 ▼              ▼
       ┌────────────────┐ ┌──────────────┐
-      │ Oracle Database│ │  Amazon S3   │
+      │ Oracle Database
+          (Externa a Ec2) │ │  Amazon S3   │
       └────────────────┘ └──────────────┘
                 │
                 ▼

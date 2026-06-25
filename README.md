@@ -70,8 +70,7 @@ Desarrollar una plataforma centralizada para la administración de guías de des
                 │              │
                 ▼              ▼
       ┌────────────────┐ ┌──────────────┐
-      │ Oracle Database
-          (Externa a Ec2) │ │  Amazon S3   │
+      │ Oracle Database (externa a EC2) │ │  Amazon S3   │
       └────────────────┘ └──────────────┘
                 │
                 ▼
